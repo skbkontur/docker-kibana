@@ -21,4 +21,4 @@ script:
 after_script:
 - docker images
 after_success:
-    "curl -H \"Content-Type&#58; application/json\" --data '{\"docker_tag\"&#58; \"$VERSION\"}' -X POST https://registry.hub.docker.com/u/skbkontur/kibana/trigger/$TOKEN/"
+- ~/trigger.sh
