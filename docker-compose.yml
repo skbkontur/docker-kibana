@@ -39,7 +39,7 @@ services:
 
 # Kibana - log vizualizer
   kibana:
-    build: .
+    build: ./kibana/4.6
     depends_on:
       - elasticsearch
     environment:
