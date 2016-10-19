@@ -1,0 +1,19 @@
+--- index.js	2016-09-02 23:43:01.000000000 +0500
++++ index.js	2016-10-18 19:00:49.261705108 +0500
+@@ -70,6 +70,8 @@
+       (0, _libExpose_client2['default'])(server);
+       (0, _libCreate_proxy2['default'])(server, 'GET', '/{paths*}');
+       (0, _libCreate_proxy2['default'])(server, 'POST', '/_mget');
++      (0, _libCreate_proxy2['default'])(server, 'POST', '/{index}/_open');
++      (0, _libCreate_proxy2['default'])(server, 'POST', '/{index}/_close');
+       (0, _libCreate_proxy2['default'])(server, 'POST', '/{index}/_search');
+       (0, _libCreate_proxy2['default'])(server, 'POST', '/{index}/_field_stats');
+       (0, _libCreate_proxy2['default'])(server, 'POST', '/_msearch');
+@@ -104,7 +106,7 @@
+       // wildcards as zero-or-more, the routes also match the kibana index
+       // itself. The client-side kibana code does not deal with creating nor
+       // destroying the kibana index, so we limit that ability here.
+-      (0, _libCreate_proxy2['default'])(server, ['PUT', 'POST', 'DELETE'], '/' + kibanaIndex + '/{paths*}', {
++      (0, _libCreate_proxy2['default'])(server, ['PUT', 'POST', 'DELETE'], '/{paths*}', {
+         pre: [noDirectIndex, noBulkCheck]
+       });

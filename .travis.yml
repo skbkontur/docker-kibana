@@ -6,9 +6,9 @@ env:
     global:
         secure: MhlBhnwYQ/I8aUt4SlL+mnUyYnvwcSjyxVTtjWFyuAnlM4cLb7jzzE7th1G20PyHtmInsCB9QV9WCCs8HM5tPIWB7PEyE1It8gTL0R7RSXftzfx1Yppx0QOvlHYji4R5empmicayw67c8D2UsJaNE4bTSbno+6YUQDA5ck27P/kvpKO/hNh89XDnhbgbGjGJCcnwOOQZcd4lz9xLN+hubBoie/1MdBjK7ZYTh9V8m6MoW+QBUEuh6kYfRimRYbYIw9PEv89NGxYtYwXU/uArVTihIg6dc+1rFvMqj5etvRm0RnQFUaNvTvcBkXEnr2a4iSPwX/Ziwkvga4ufkDZNaKVdDMfULm381FgwLrSd4gb5n3wmmGCqDwSk+qvyKIRo2ke5tGO0zRi9lWG589i1i7EI288xhNz95/6GbDOQeYaegbwHoKHiIcV/OdDuJrQORX3xsEqscjb2oAH3hVwyz5wH8XbsQ5PMyZAwMJ4PlR4a16npidyRWWwu7AnzhA/lVybQxvXGDINcFJenmrZrwI/ZVqI2QbUyoEzh7uFa7/kNUuJM5FrXS0sAJKXxV9d3Tj8cbRYvkbgshC89XV1xPT0fhv9hn1EABi4f9bM6/FkAf+smV+7Kw2EIvi+zf4QsX/Stk8WMCwXuDTZX0sz3Jx4uSMc6RLsd0hyfmScdpYg=
     matrix:
-        - VERSION=4.6 DOCKER_TAG=latest
-        - VERSION=4.6 DOCKER_TAG=4.6
-        - VERSION=4.5 DOCKER_TAG=4.6
+        - VERSION=latest
+        - VERSION=4.6
+        - VERSION=4.5
 install:
 - git clone https://github.com/docker-library/official-images.git ~/official-images
 before_script:
@@ -20,4 +20,4 @@ script:
 - ~/official-images/test/run.sh "$image"
 after_script:
 - docker images
-- curl -H "Content-Type: application/json" --data '{"docker_tag": "$DOCKER_TAG"}' -X POST https://registry.hub.docker.com/u/skbkontur/kibana/trigger/$TOKEN/
+- >curl -H "Content-Type: application/json" --data '{"docker_tag": "$VERSION"}' -X POST https://registry.hub.docker.com/u/skbkontur/kibana/trigger/$TOKEN/
