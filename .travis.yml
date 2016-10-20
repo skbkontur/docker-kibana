@@ -21,4 +21,4 @@ script:
 after_script:
 - docker images
 after_success:
-- $TRAVIS_BUILD_DIR/trigger.sh
+- $TRAVIS_BUILD_DIR/trigger.py
