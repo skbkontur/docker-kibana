@@ -16,6 +16,6 @@ if version==None:
 url     = "https://registry.hub.docker.com/u/skbkontur/kibana/trigger/%s/" % token
 payload = { 'docker_tag' : version }
 headers = { 'Content-Type': 'application/json'}
-res = requests.post(url, data=payload, headers=headers)
 
+res = requests.post(url, data=payload, headers=headers)
 print res
