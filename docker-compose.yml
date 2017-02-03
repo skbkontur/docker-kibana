@@ -39,9 +39,11 @@ services:
 
 # Kibana - log vizualizer
   kibana:
-    build: ./kibana/4.6
+    build: ./docker/kibana/4.6
     depends_on:
       - elasticsearch
+    ports:
+      - '5601:5601'
     environment:
       NODE_OPTIONS: "--max-old-space-size=300"
     networks:

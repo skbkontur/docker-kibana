@@ -1,7 +1,7 @@
 default: build
 
 build:
-	docker build -t skbkontur/kibana:latest .
+	docker-compose build kibana
 
 run:
 	docker-compose up -d
