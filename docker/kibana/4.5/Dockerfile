@@ -9,4 +9,4 @@ RUN patch -p1 -d "/opt/kibana/src/plugins/elasticsearch" index.js /patches/0001-
 RUN patch -p1 -d "/opt/kibana/src/plugins/kibana/public/visualize/editor" agg_params.js /patches/0002-Disable-analyzed-fields.diff
 
 
-RUN cd /opt/kibana/ && bin/kibana plugin --install elopen --url 'https://github.com/skbkontur/elopen/archive/v1.0.4.zip'
+RUN cd /opt/kibana/ && bin/kibana plugin --install elopen --url 'https://github.com/skbkontur/elopen/archive/v1.0.5.zip'
