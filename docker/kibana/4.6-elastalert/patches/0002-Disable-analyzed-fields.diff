@@ -1,0 +1,10 @@
+--- agg_params.js	2017-02-03 15:27:33.686896091 +0500
++++ agg_params.js	2017-02-03 15:27:25.111064097 +0500
+@@ -142,7 +142,7 @@
+
+           if (fieldTypes) {
+             fields = $filter('fieldType')(fields, fieldTypes);
+-            fields = $filter('filter')(fields, { bucketable: true });
++            fields = $filter('filter')(fields, { analyzed: false, bucketable: true });
+             fields = $filter('orderBy')(fields, ['type', 'name']);
+           }
