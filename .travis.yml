@@ -6,9 +6,6 @@ env:
     global:
         secure: "aYCzzl6NcCKUPITN0w55/BM2DzDdlf2Hz9jO6AgTLr2jB1Wsr+WiU1eykOnPQvToD+V4QtUZUymzytzO4BCWnFvLrrbLdsmgw2cFv6jqlc8MQ91GVwJzgIzV6dPw6R48ygR6nhP1LN2uJikp2Egfj8lkRWWInZy28ZnunSCoojBWAb9wd+OYDTsKYi+ymLmtUIMyE/YUFUhrdY7Q6fkkI0mceFObedi7tE/0qdrm9dlshKtUR+awMqVpughdMxrNQya6xswMdJ1AKNd3/x5ABoKDvDo38vpuV4mQXuGJuoXSmBabR5BzcEbTD+MH0auSi/DbIaxcgAclOWT/FXle1qcZ1gZObvivI7DA3wWXDY6ofo8F8OQrmNWmKoziNdFG2uEmgfZ4ylHY4JhbkoU9WWBmRwctTEz0VT4Ljwbo/kNTgHH0rgJm/j0ftlhx83s0aSzU+H6gVEHIP5Mk0l0meGi0JGznndFOY5mUKrcG37vTM6A/vCFBiPzblVYwJRWkR9n/r3teNSiPtLUOuYNt5dXrDgThaNjjzjybG23AvSbaCYW9dOB+d2ccua8AQ3q7zhu85rr0n0DcbxenLBhjwFVVdncXctL8o1jfcp0a8EbhqktLpTxDwHNfZEoq3pOhXyrv0b7sKPrzsmafBOJxYcEEwf8zpsgNww4ArwiBLOo="
     matrix:
-        - VERSION=latest
-        - VERSION=4.6
-        - VERSION=4.5
         - VERSION=6.2.3
 install:
 - git clone https://github.com/docker-library/official-images.git ~/official-images
