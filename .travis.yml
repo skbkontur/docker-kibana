@@ -9,6 +9,7 @@ env:
         - VERSION=latest
         - VERSION=4.6
         - VERSION=4.5
+        - VERSION=6.2.3
 install:
 - git clone https://github.com/docker-library/official-images.git ~/official-images
 before_script:
